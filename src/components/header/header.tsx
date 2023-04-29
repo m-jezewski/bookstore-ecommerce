@@ -1,5 +1,4 @@
-import { Button, Container, Drawer, IconButton, Toolbar, useMediaQuery } from '@mui/material';
-import Link from 'next/link';
+import { Button, IconButton, Toolbar, useMediaQuery } from '@mui/material';
 import { Bars3Icon, ShoppingCartIcon, UserIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import {
@@ -11,6 +10,8 @@ import {
   UpperHeader,
   StyledTextField,
 } from './headerStyles';
+import { NavDrawer } from '../navDrawer/navDrawer';
+import { NavList } from '../navList/navList';
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -20,11 +21,7 @@ const Header = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  let container;
-
-  if (typeof window !== 'undefined') {
-    container = window !== undefined ? () => window.document.body : undefined;
-  }
+  const navItems = ['BOOKS', 'AUDIOBOOKS', 'EBOOKS', 'GIFT CARDS', 'FAQ', 'ABOUT US', 'COUPONS & DEALS'];
 
   return (
     <>
@@ -59,47 +56,11 @@ const Header = () => {
                 )}
               </UpperHeaderSection>
             </UpperHeader>
-            <Container
-              component={'nav'}
-              sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'space-between', gap: 1 }}
-            >
-              <Button size="large" component={Link} href="">
-                BOOKS
-              </Button>
-              <Button size="large" component={Link} href="">
-                AUDIOBOOKS
-              </Button>
-              <Button size="large" component={Link} href="">
-                EBOOKS
-              </Button>
-              <Button size="large" component={Link} href="">
-                GIFT CARDS
-              </Button>
-              <Button size="large" component={Link} href="">
-                FAQ
-              </Button>
-              <Button size="large" component={Link} href="">
-                ABOUT US
-              </Button>
-              <Button size="large" component={Link} href="">
-                COUPONS & DEALS
-              </Button>
-            </Container>
+            <NavList navItems={navItems} />
           </StyledStack>
         </Toolbar>
       </StyledAppBar>
-      <Drawer
-        container={container}
-        variant="temporary"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-        ModalProps={{ keepMounted: true }}
-        sx={{
-          display: { xs: 'block', md: 'none' },
-        }}
-      >
-        <>drawer content here</>
-      </Drawer>
+      <NavDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} navItems={navItems} />
     </>
   );
 };

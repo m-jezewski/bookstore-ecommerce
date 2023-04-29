@@ -5,13 +5,16 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: theme.palette.primary.light,
   color: theme.palette.primary.dark,
   paddingTop: theme.spacing(2),
-  paddingBottom: theme.spacing(2),
+  paddingBottom: theme.spacing(1.5),
 }));
 
 const StyledStack = styled(Stack)(({ theme }) => ({
   width: '100%',
   alignItems: 'center',
-  gap: theme.spacing(2),
+  justifyContent: 'center',
+  [theme.breakpoints.up('md')]: {
+    gap: theme.spacing(2),
+  },
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
@@ -25,8 +28,10 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 const LogoTypography = styled(Typography)(({ theme }) => ({
   textAlign: 'center',
   ...theme.typography.h5,
+  fontSize: '1.65rem',
   letterSpacing: 1.3,
-  color: theme.palette.primary.main,
+  textTransform: 'uppercase',
+  color: theme.palette.secondary.main,
 
   [theme.breakpoints.between('md', 'lg')]: {
     marginLeft: theme.spacing(3),
