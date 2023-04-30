@@ -23,44 +23,46 @@ const Header = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const navItems = ['BOOKS', 'AUDIOBOOKS', 'EBOOKS', 'GIFT CARDS', 'FAQ', 'ABOUT US', 'COUPONS & DEALS'];
-
   return (
     <>
-      <StyledAppBar variant="outlined">
+      <StyledAppBar elevation={1}>
         <Toolbar>
           <StyledStack>
             <UpperHeader>
               <UpperHeaderSection>
-                <StyledIconButton aria-label="Open menu" onClick={handleDrawerToggle}>
+                <StyledIconButton aria-label='Open menu' onClick={handleDrawerToggle}>
                   <Bars3Icon height={24} width={24} />
                 </StyledIconButton>
-                <LogoTypography variant="h2">Booktopia</LogoTypography>
+                <LogoTypography variant='h2'>Booktopia</LogoTypography>
               </UpperHeaderSection>
               <UpperHeaderSection>
                 {upMd ? (
                   <>
-                    <StyledTextField variant="standard" size="small" label="Search by title, author, publisher..." />
+                    <StyledTextField
+                      variant='standard'
+                      size='small'
+                      label='Search by title, author, publisher...'
+                    />
                     <Button startIcon={<ShoppingCartIcon height={24} width={24} />}>Cart</Button>
                     <Button startIcon={<UserIcon height={24} width={24} />}>Account</Button>
                   </>
                 ) : (
                   <>
-                    <IconButton aria-label="Cart">
+                    <IconButton aria-label='Cart'>
                       <ShoppingCartIcon height={24} width={24} />
                     </IconButton>
-                    <IconButton aria-label="Account">
+                    <IconButton aria-label='Account'>
                       <UserIcon height={24} width={24} />
                     </IconButton>
                   </>
                 )}
               </UpperHeaderSection>
             </UpperHeader>
-            <NavList navItems={navItems} />
+            <NavList />
           </StyledStack>
         </Toolbar>
       </StyledAppBar>
-      <NavDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} navItems={navItems} />
+      <NavDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
     </>
   );
 };

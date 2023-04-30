@@ -1,0 +1,33 @@
+[
+  {
+    "name": "BOOKS",
+    "popoverMenuItems": ["fantasy", "history", "blahblah"],
+    "href": "/"
+  },
+  {
+    "name": "AUDIOBOOKS",
+    "popoverMenuItems": ["blahblah", "blahblah", "blahblah"],
+    "href": "/"
+  },
+  {
+    "name": "EBOOKS",
+    "popoverMenuItems": ["foo", "bar", "foobar", "smth"],
+    "href": "/"
+  },
+  {
+    "name": "GIFT CARDS",
+    "href": "/"
+  },
+  {
+    "name": "FAQ",
+    "href": "/"
+  },
+  {
+    "name": "ABOUT US",
+    "href": "/"
+  },
+  {
+    "name": "COUPONS & DEALS",
+    "href": "/"
+  }
+]

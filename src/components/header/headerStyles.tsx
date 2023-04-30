@@ -5,7 +5,8 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: theme.palette.primary.light,
   color: theme.palette.primary.dark,
   paddingTop: theme.spacing(2),
-  paddingBottom: theme.spacing(1.5),
+  paddingBottom: theme.spacing(1.25),
+  zIndex: 1400,
 }));
 
 const StyledStack = styled(Stack)(({ theme }) => ({

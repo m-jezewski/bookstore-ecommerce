@@ -1,15 +1,15 @@
 import { Box, Divider, List, ListItem, ListItemButton } from '@mui/material';
 import { LogoTypography, StyledDrawer, StyledListItemText } from './navDrawerStyles';
+import navItems from '../navItems.json';
 
 interface NavDrawerProps {
   mobileOpen: boolean;
   handleDrawerToggle: () => void;
-  navItems: string[];
 }
 
 // Drawer for opening nav in mobile resolution
 
-export const NavDrawer = ({ mobileOpen, handleDrawerToggle, navItems }: NavDrawerProps) => {
+export const NavDrawer = ({ mobileOpen, handleDrawerToggle }: NavDrawerProps) => {
   let container;
   if (typeof window !== 'undefined') {
     container = () => window.document.body;
@@ -18,19 +18,18 @@ export const NavDrawer = ({ mobileOpen, handleDrawerToggle, navItems }: NavDrawe
   return (
     <StyledDrawer
       container={container}
-      variant="temporary"
+      variant='temporary'
       open={mobileOpen}
       onClose={handleDrawerToggle}
-      ModalProps={{ keepMounted: true }}
-    >
+      ModalProps={{ keepMounted: true }}>
       <Box component={'nav'} onClick={handleDrawerToggle}>
         <LogoTypography>Booktopia</LogoTypography>
         <Divider />
         <List>
           {navItems.map((item) => (
-            <ListItem key={item} disablePadding>
+            <ListItem key={item.name} disablePadding>
               <ListItemButton>
-                <StyledListItemText primary={item} />
+                <StyledListItemText primary={item.name} />
               </ListItemButton>
             </ListItem>
           ))}
