@@ -1,4 +1,4 @@
-import { Box, Drawer, ListItemText, Typography, styled } from '@mui/material';
+import { Drawer, ListItemText, Typography, styled } from '@mui/material';
 
 const StyledDrawer = styled(Drawer)(({ theme }) => ({
   display: 'block',
@@ -11,10 +11,12 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
 const LogoTypography = styled(Typography)(({ theme }) => ({
   textAlign: 'center',
-  ...theme.typography.h5,
+  fontWeight: 600,
+  fontSize: '1.65rem',
   letterSpacing: 1.3,
   marginTop: theme.spacing(2),
   marginBottom: theme.spacing(2),
+  textTransform: 'uppercase',
   color: theme.palette.secondary.main,
 }));
 

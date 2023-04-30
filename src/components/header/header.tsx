@@ -13,6 +13,8 @@ import {
 import { NavDrawer } from '../navDrawer/navDrawer';
 import { NavList } from '../navList/navList';
 
+// App main header component
+
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const upMd = useMediaQuery('(min-width: 900px)');
@@ -25,7 +27,7 @@ const Header = () => {
 
   return (
     <>
-      <StyledAppBar variant="elevation">
+      <StyledAppBar variant="outlined">
         <Toolbar>
           <StyledStack>
             <UpperHeader>
@@ -38,10 +40,8 @@ const Header = () => {
               <UpperHeaderSection>
                 {upMd ? (
                   <>
-                    <StyledTextField variant="outlined" size="small" label="Search by title, author, publisher..." />
-                    <Button variant="contained" startIcon={<ShoppingCartIcon height={24} width={24} />}>
-                      Cart
-                    </Button>
+                    <StyledTextField variant="standard" size="small" label="Search by title, author, publisher..." />
+                    <Button startIcon={<ShoppingCartIcon height={24} width={24} />}>Cart</Button>
                     <Button startIcon={<UserIcon height={24} width={24} />}>Account</Button>
                   </>
                 ) : (

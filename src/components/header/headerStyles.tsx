@@ -27,7 +27,7 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 
 const LogoTypography = styled(Typography)(({ theme }) => ({
   textAlign: 'center',
-  ...theme.typography.h5,
+  fontWeight: 600,
   fontSize: '1.65rem',
   letterSpacing: 1.3,
   textTransform: 'uppercase',
@@ -40,14 +40,14 @@ const LogoTypography = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     position: 'absolute',
     left: '50%',
-    translate: '-50%',
+    translate: '-50% 2px',
   },
 }));
 
 const UpperHeaderSection = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  gap: theme.spacing(2),
+  gap: theme.spacing(4),
 }));
 
 const UpperHeader = styled(Box)(({ theme }) => ({
@@ -58,7 +58,8 @@ const UpperHeader = styled(Box)(({ theme }) => ({
 }));
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
-  width: '14rem',
+  width: '13rem',
+  translate: '0 -5px',
   [theme.breakpoints.down('md')]: {
     display: 'none',
   },

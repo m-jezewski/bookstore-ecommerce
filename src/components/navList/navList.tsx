@@ -1,4 +1,4 @@
-import { Box, Button } from '@mui/material';
+import { Box, Button, ButtonGroup } from '@mui/material';
 import Link from 'next/link';
 import { StyledContainer } from './navListStyles';
 
@@ -12,11 +12,13 @@ export const NavList = ({ navItems }: NavListProps) => {
   return (
     <Box component="nav" width={'100%'}>
       <StyledContainer>
-        {navItems.map((navItem) => (
-          <Button key={navItem} size="large" component={Link} href="">
-            {navItem}
-          </Button>
-        ))}
+        <ButtonGroup variant="text" size="large" sx={{ width: '100%' }}>
+          {navItems.map((navItem) => (
+            <Button key={navItem} component={Link} href="" sx={{ flexGrow: 1, borderRight: 'none !important' }}>
+              {navItem}
+            </Button>
+          ))}
+        </ButtonGroup>
       </StyledContainer>
     </Box>
   );
