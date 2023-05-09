@@ -48,7 +48,11 @@ const LogoTypography = styled(Typography)(({ theme }) => ({
 const UpperHeaderSection = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  gap: theme.spacing(4),
+  gap: theme.spacing(1),
+
+  [theme.breakpoints.up('sm')]: {
+    gap: theme.spacing(4),
+  },
 }));
 
 const UpperHeader = styled(Box)(({ theme }) => ({

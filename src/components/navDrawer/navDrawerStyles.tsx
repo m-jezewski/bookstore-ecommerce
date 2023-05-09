@@ -14,7 +14,7 @@ const LogoTypography = styled(Typography)(({ theme }) => ({
   fontWeight: 600,
   fontSize: '1.65rem',
   letterSpacing: 1.3,
-  marginTop: theme.spacing(2),
+  marginTop: theme.spacing(4.5),
   marginBottom: theme.spacing(2),
   textTransform: 'uppercase',
   color: theme.palette.secondary.main,

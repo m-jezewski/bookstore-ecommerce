@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <>
-      <StyledAppBar elevation={1}>
+      <StyledAppBar variant='outlined'>
         <Toolbar>
           <StyledStack>
             <UpperHeader>
