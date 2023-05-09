@@ -45,6 +45,7 @@ export const OnHoverPopover = ({
         LinkComponent={linkButtonComponent ? Link : undefined}
         href={href || undefined}
         variant={buttonVariant}
+        component={linkButtonComponent ? Link : Button}
         aria-owns={openPopover ? 'mouse-over-popover' : undefined}
         aria-haspopup='true'
         ref={anchorRef}
@@ -67,7 +68,14 @@ export const OnHoverPopover = ({
         }}
         onClose={handlePopoverClose}
         disableRestoreFocus
-        sx={wrapperSx}>
+        sx={{
+          '& .MuiPaper-root': {
+            left: '0 !important',
+            right: '0 !important',
+            minWidth: '100vw',
+          },
+          ...wrapperSx,
+        }}>
         <Box onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>
           {children}
         </Box>
