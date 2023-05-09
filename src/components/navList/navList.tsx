@@ -3,12 +3,11 @@ import Link from 'next/link';
 import { StyledContainer } from './navListStyles';
 import navItems from '../navItems.json';
 import { OnHoverPopover } from '../onHoverPopover/onHoverPopover';
+import { NavListItemMenu } from '../navListItemMenu/NavListItemMenu';
 
 // Nav component in desktop resolution
 
 export const NavList = () => {
-  console.log(navItems);
-
   return (
     <Box component='nav' width={'100%'}>
       <StyledContainer>
@@ -16,9 +15,11 @@ export const NavList = () => {
           {navItems.map((navItem) =>
             navItem.popoverMenuItems ? (
               <OnHoverPopover
-                key={navItem.name}
-                buttonText={navItem.name}
+                key={navItem.text}
+                buttonText={navItem.text}
+                linkButtonComponent
                 buttonVariant='text'
+                href={navItem.href}
                 buttonSx={{
                   flexGrow: 1,
                   borderRight: 'none !important',
@@ -26,15 +27,15 @@ export const NavList = () => {
                 wrapperSx={{
                   translate: '0px 0.65rem',
                 }}>
-                <Box>elo elo</Box>
+                <NavListItemMenu title={navItem.text} menuItems={navItem.popoverMenuItems} />
               </OnHoverPopover>
             ) : (
               <Button
-                key={navItem.name}
+                key={navItem.text}
                 component={Link}
                 href={navItem.href}
                 sx={{ flexGrow: 1, borderRight: 'none !important' }}>
-                {navItem.name}
+                {navItem.text}
               </Button>
             ),
           )}

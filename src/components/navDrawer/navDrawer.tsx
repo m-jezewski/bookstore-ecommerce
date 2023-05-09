@@ -27,9 +27,9 @@ export const NavDrawer = ({ mobileOpen, handleDrawerToggle }: NavDrawerProps) =>
         <Divider />
         <List>
           {navItems.map((item) => (
-            <ListItem key={item.name} disablePadding>
+            <ListItem key={item.text} disablePadding>
               <ListItemButton>
-                <StyledListItemText primary={item.name} />
+                <StyledListItemText primary={item.text} />
               </ListItemButton>
             </ListItem>
           ))}

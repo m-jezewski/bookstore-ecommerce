@@ -1,33 +1,195 @@
 [
   {
-    "name": "BOOKS",
-    "popoverMenuItems": ["fantasy", "history", "blahblah"],
+    "text": "Books",
+    "popoverMenuItems": [
+      {
+        "listTitle": "Top Subjects",
+        "items": [
+          { "text": "Romance", "href": "/" },
+          { "text": "History", "href": "/" },
+          { "text": "Fantasy", "href": "/" },
+          { "text": "Self-Help", "href": "/" },
+          { "text": "Psychology", "href": "/" },
+          { "text": "Horror", "href": "/" },
+          { "text": "Poetry", "href": "/" },
+          { "text": "Manga", "href": "/" },
+          { "text": "Sci-Fi", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Customer Favorites",
+        "items": [
+          { "text": "Top 50", "href": "/" },
+          { "text": "Staff Picks", "href": "/" },
+          { "text": "New Releases", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Fiction",
+        "items": [
+          { "text": "Romance", "href": "/" },
+          { "text": "Sci-Fi", "href": "/" },
+          { "text": "Fantasy", "href": "/" },
+          { "text": "Mystery/Thriller", "href": "/" },
+          { "text": "Horror", "href": "/" },
+          { "text": "Poetry", "href": "/" },
+          { "text": "Manga", "href": "/" },
+          { "text": "Historical Fiction", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Non-Fiction",
+        "items": [
+          { "text": "Self-Help", "href": "/" },
+          { "text": "Biography/Memoir", "href": "/" },
+          { "text": "History", "href": "/" },
+          { "text": "Health/Fitness", "href": "/" },
+          { "text": "Psychology", "href": "/" },
+          { "text": "Cookbooks", "href": "/" },
+          { "text": "Education", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Kids & Teens",
+        "items": [
+          { "text": "For kids", "href": "/" },
+          { "text": "Teens & Young Adults", "href": "/" }
+        ]
+      }
+    ],
     "href": "/"
   },
   {
-    "name": "AUDIOBOOKS",
-    "popoverMenuItems": ["blahblah", "blahblah", "blahblah"],
+    "text": "Audiobooks",
+    "popoverMenuItems": [
+      {
+        "listTitle": "Top Subjects",
+        "items": [
+          { "text": "Horror", "href": "/" },
+          { "text": "Mystery/Thriller", "href": "/" },
+          { "text": "Romance", "href": "/" },
+          { "text": "History", "href": "/" },
+          { "text": "Sci-Fi", "href": "/" },
+          { "text": "Historical Fiction", "href": "/" },
+          { "text": "Fantasy", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Customer Favorites",
+        "items": [
+          { "text": "Top 20 audiobooks", "href": "/" },
+          { "text": "Staff Picks", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Fiction",
+        "items": [
+          { "text": "Mystery/Thriller", "href": "/" },
+          { "text": "Romance", "href": "/" },
+          { "text": "Sci-Fi", "href": "/" },
+          { "text": "Historical Fiction", "href": "/" },
+          { "text": "Fantasy", "href": "/" },
+          { "text": "Horror", "href": "/" },
+          { "text": "Poetry", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Non-Fiction",
+        "items": [
+          { "text": "Psychology", "href": "/" },
+          { "text": "Education", "href": "/" },
+          { "text": "Self-Help", "href": "/" },
+          { "text": "Biography/Memoir", "href": "/" },
+          { "text": "History", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Listen while...",
+        "items": [
+          { "text": "Walking", "href": "/" },
+          { "text": "Relaxing", "href": "/" },
+          { "text": "Traveling", "href": "/" },
+          { "text": "Driving", "href": "/" },
+          { "text": "Spending time with family", "href": "/" }
+        ]
+      }
+    ],
     "href": "/"
   },
   {
-    "name": "EBOOKS",
-    "popoverMenuItems": ["foo", "bar", "foobar", "smth"],
+    "text": "Ebooks",
+    "popoverMenuItems": [
+      {
+        "listTitle": "Top Subjects",
+        "items": [
+          { "text": "Manga", "href": "/" },
+          { "text": "History", "href": "/" },
+          { "text": "Horror", "href": "/" },
+          { "text": "Self-Help", "href": "/" },
+          { "text": "Sci-Fi", "href": "/" },
+          { "text": "Psychology", "href": "/" },
+          { "text": "Mystery/Thriller", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Customer Favorites",
+        "items": [
+          { "text": "Top 20 ebooks", "href": "/" },
+          { "text": "Free eBooks", "href": "/" },
+          { "text": "Staff Picks", "href": "/" },
+          { "text": "New Releases", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Fiction",
+        "items": [
+          { "text": "Romance", "href": "/" },
+          { "text": "Sci-Fi", "href": "/" },
+          { "text": "Fantasy", "href": "/" },
+          { "text": "Mystery/Thriller", "href": "/" },
+          { "text": "Horror", "href": "/" },
+          { "text": "Poetry", "href": "/" },
+          { "text": "Manga", "href": "/" },
+          { "text": "Historical Fiction", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Non-Fiction",
+        "items": [
+          { "text": "Self-Help", "href": "/" },
+          { "text": "Biography/Memoir", "href": "/" },
+          { "text": "History", "href": "/" },
+          { "text": "Health/Fitness", "href": "/" },
+          { "text": "Psychology", "href": "/" },
+          { "text": "Cookbooks", "href": "/" },
+          { "text": "Education", "href": "/" }
+        ]
+      },
+      {
+        "listTitle": "Digital discounts",
+        "items": [
+          { "text": "Free eBooks", "href": "/" },
+          { "text": "Less than $5", "href": "/" },
+          { "text": "eBook Deals", "href": "/" }
+        ]
+      }
+    ],
     "href": "/"
   },
   {
-    "name": "GIFT CARDS",
+    "text": "Gift Cards",
     "href": "/"
   },
   {
-    "name": "FAQ",
+    "text": "FAQ",
     "href": "/"
   },
   {
-    "name": "ABOUT US",
+    "text": "About us",
     "href": "/"
   },
   {
-    "name": "COUPONS & DEALS",
+    "text": "Coupons & Deals",
     "href": "/"
   }
 ]
