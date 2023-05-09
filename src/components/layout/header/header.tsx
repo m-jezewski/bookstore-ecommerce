@@ -1,6 +1,8 @@
 import { Button, IconButton, Toolbar, useMediaQuery } from '@mui/material';
 import { Bars3Icon, ShoppingCartIcon, UserIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
+import { NavList } from '../nav/navList/navList';
+import { NavDrawer } from '../nav/navDrawer/navDrawer';
 import {
   StyledAppBar,
   StyledStack,
@@ -10,8 +12,6 @@ import {
   UpperHeader,
   StyledTextField,
 } from './headerStyles';
-import { NavDrawer } from '../navDrawer/navDrawer';
-import { NavList } from '../navList/navList';
 
 // App main header component
 
