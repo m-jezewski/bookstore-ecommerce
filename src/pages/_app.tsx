@@ -6,11 +6,14 @@ import '@fontsource/roboto/700.css';
 import type { AppProps } from 'next/app';
 import { theme } from '@/styles/muiTheme';
 import { ThemeProvider } from '@mui/material';
+import Layout from '@/components/layout/layout/layout';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
