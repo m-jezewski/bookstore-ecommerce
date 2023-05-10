@@ -1,6 +1,6 @@
 import { Box, Container, Typography, styled } from '@mui/material';
 
-const SectionWrapper = styled('main')(({ theme }) => ({
+const SectionWrapper = styled(Box)(({ theme }) => ({
   backgroundImage: 'URL(/books-985939_1920.webp)',
   backgroundSize: 'cover',
   position: 'relative',

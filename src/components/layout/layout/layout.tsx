@@ -2,7 +2,7 @@ import { Box, Container } from '@mui/material';
 import { ReactNode } from 'react';
 import Header from '../header/header';
 import Footer from '../footer/footer';
-import { LayoutWrapper } from './layoutStyles';
+import { LayoutWrapper, Main } from './layoutStyles';
 
 interface LayoutProps {
   children: ReactNode;
@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <LayoutWrapper>
       <Header />
-      {children}
+      <Main>{children}</Main>
       <Footer />
     </LayoutWrapper>
   );
