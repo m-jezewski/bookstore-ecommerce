@@ -1,0 +1,74 @@
+[
+  {
+    "text": "Help",
+    "listItems": [
+      {
+        "text": "FAQ",
+        "href": "/"
+      },
+      {
+        "text": "Returns policy",
+        "href": "/"
+      },
+      {
+        "text": "Types of payment",
+        "href": "/"
+      },
+      {
+        "text": "Delivery items",
+        "href": "/"
+      }
+    ]
+  },
+  {
+    "text": "Terms",
+    "listItems": [
+      {
+        "text": "Privacy policy",
+        "href": "/"
+      },
+      {
+        "text": "Terms of use",
+        "href": "/"
+      }
+    ]
+  },
+  {
+    "text": "About us",
+    "listItems": [
+      {
+        "text": "Booktopia",
+        "href": "/"
+      },
+      {
+        "text": "About us",
+        "href": "/"
+      },
+      {
+        "text": "Our commitments",
+        "href": "/"
+      }
+    ]
+  },
+  {
+    "text": "Buy online",
+    "listItems": [
+      {
+        "text": "Books",
+        "href": "/"
+      },
+      {
+        "text": "eBooks",
+        "href": "/"
+      },
+      {
+        "text": "Audiobooks",
+        "href": "/"
+      },
+      {
+        "text": "Gift Cards",
+        "href": "/"
+      }
+    ]
+  }
+]
