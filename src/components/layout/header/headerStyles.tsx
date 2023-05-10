@@ -2,8 +2,8 @@ import { AppBar, Box, Card, IconButton, Stack, TextField, Typography, styled } f
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   position: 'fixed',
-  backgroundColor: theme.palette.primary.light,
-  color: theme.palette.primary.dark,
+  backgroundColor: theme.palette.background.default,
+  color: theme.palette.text.primary,
   paddingTop: theme.spacing(2),
   paddingBottom: theme.spacing(1.25),
   zIndex: 1400,
@@ -19,8 +19,6 @@ const StyledStack = styled(Stack)(({ theme }) => ({
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
-  color: theme.palette.primary.dark,
-
   [theme.breakpoints.up('md')]: {
     display: 'none',
   },

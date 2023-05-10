@@ -1,5 +1,5 @@
 import { Box, Divider, List, ListItem, ListItemButton } from '@mui/material';
-import { LogoTypography, StyledDrawer, StyledListItemText } from './navDrawerStyles';
+import { StyledDrawer, StyledListItemText } from './navDrawerStyles';
 import navItems from '../navItems.json';
 
 interface NavDrawerProps {
@@ -23,8 +23,6 @@ export const NavDrawer = ({ mobileOpen, handleDrawerToggle }: NavDrawerProps) =>
       onClose={handleDrawerToggle}
       ModalProps={{ keepMounted: true }}>
       <Box component={'nav'} onClick={handleDrawerToggle}>
-        <LogoTypography>Booktopia</LogoTypography>
-        <Divider />
         <List>
           {navItems.map((item) => (
             <ListItem key={item.text} disablePadding>
@@ -34,6 +32,7 @@ export const NavDrawer = ({ mobileOpen, handleDrawerToggle }: NavDrawerProps) =>
             </ListItem>
           ))}
         </List>
+        <Divider />
       </Box>
     </StyledDrawer>
   );

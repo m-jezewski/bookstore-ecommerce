@@ -3,7 +3,6 @@
 body {
   margin: 0;
   color: #080F0F;
-  background: rgb(228,245,249);
-  background: linear-gradient(180deg, rgb(222, 247, 253) 0%, rgba(241,243,244,1) 20%, rgba(243,243,243,1) 80%, rgb(214, 245, 253) 100%);
+  background: #F3F3F3;
   min-height: 100vh;
 }

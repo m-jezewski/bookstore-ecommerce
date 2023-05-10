@@ -3,6 +3,7 @@ import { Box, Container, ListItem, ListItemText, Paper, Typography, styled } fro
 const FooterWrapper = styled(Box)(({ theme }) => ({
   padding: theme.spacing(4),
   borderTop: `1px ${theme.palette.divider} solid`,
+  backgroundColor: theme.palette.background.default,
 }));
 
 const StyledContainer = styled(Container)(({ theme }) => ({
@@ -26,6 +27,7 @@ const StyledListItemText = styled(ListItemText)(({ theme }) => ({
   '& a': {
     transition: '100ms all ease-out',
     textDecoration: 'none',
+    color: theme.palette.text.primary,
   },
   '& a:hover': {
     color: theme.palette.secondary.main,
