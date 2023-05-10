@@ -32,7 +32,11 @@ const LogoTypography = styled(Typography)(({ theme }) => ({
   fontSize: '1.65rem',
   letterSpacing: 1.3,
   textTransform: 'uppercase',
-  color: theme.palette.secondary.main,
+
+  '& a': {
+    color: theme.palette.secondary.main,
+    textDecoration: 'none',
+  },
 
   [theme.breakpoints.between('md', 'lg')]: {
     marginLeft: theme.spacing(3),

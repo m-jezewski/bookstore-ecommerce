@@ -12,6 +12,7 @@ import {
   UpperHeader,
   StyledTextField,
 } from './headerStyles';
+import Link from 'next/link';
 
 // App main header component
 
@@ -25,7 +26,7 @@ const Header = () => {
 
   return (
     <>
-      <StyledAppBar variant='outlined'>
+      <StyledAppBar variant='outlined' elevation={0}>
         <Toolbar>
           <StyledStack>
             <UpperHeader>
@@ -33,7 +34,9 @@ const Header = () => {
                 <StyledIconButton aria-label='Open menu' onClick={handleDrawerToggle}>
                   <Bars3Icon height={24} width={24} />
                 </StyledIconButton>
-                <LogoTypography variant='h2'>Booktopia</LogoTypography>
+                <LogoTypography variant='h2'>
+                  <Link href='/'>Booktopia</Link>
+                </LogoTypography>
               </UpperHeaderSection>
               <UpperHeaderSection>
                 {upMd ? (
