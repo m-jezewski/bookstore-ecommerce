@@ -1,6 +1,7 @@
 import { Box, Button, Popover, SxProps, Theme } from '@mui/material';
 import Link from 'next/link';
-import { useRef, useState, ReactNode } from 'react';
+import { useRouter } from 'next/router';
+import { useRef, useState, ReactNode, useEffect } from 'react';
 
 interface OnHoverPopoverProps {
   buttonText: string;
@@ -23,6 +24,7 @@ export const OnHoverPopover = ({
 }: OnHoverPopoverProps) => {
   const [openPopover, setOpenPopover] = useState(false);
   const anchorRef = useRef<HTMLButtonElement | null>(null);
+  const router = useRouter();
   let mouseInTarget = false;
 
   const handlePopoverOpen = () => {
@@ -38,6 +40,10 @@ export const OnHoverPopover = ({
       }
     }, 150);
   };
+
+  useEffect(() => {
+    setOpenPopover(false); // Closes popover when user clicks in link
+  }, [router.pathname]);
 
   return (
     <>
