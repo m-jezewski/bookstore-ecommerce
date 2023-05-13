@@ -1,0 +1,57 @@
+[
+  {
+    "sectionTitle": "General Questions",
+    "items": [
+      {
+        "question": "What is your return policy?",
+        "answer": "We want you to be completely satisfied with your purchase, which is why we offer a hassle-free return policy. If for any reason you're not satisfied with your order, simply contact us within 30 days of receiving your shipment and we'll be happy to assist you with a return or exchange."
+      },
+      {
+        "question": "How do I track my order?",
+        "answer": "Once your order has shipped, you will receive a tracking number via email. You can use this number to track the status of your shipment at any time."
+      },
+      {
+        "question": "Do you offer international shipping?",
+        "answer": "Yes, we ship to many countries around the world. However, please note that shipping rates and times may vary depending on your location."
+      },
+      {
+        "question": "How can I contact your customer service team?",
+        "answer": "You can contact our customer service team by email or phone. We're here to help with any questions or concerns you may have."
+      }
+    ]
+  },
+  {
+    "sectionTitle": "Ordering Questions",
+    "items": [
+      {
+        "question": "Do you offer gift wrapping?",
+        "answer": "Yes, we offer gift wrapping for an additional fee. Simply select the gift wrapping option during checkout and we'll take care of the rest."
+      },
+      {
+        "question": "Can I cancel or modify my order after it's been placed?",
+        "answer": "Once an order has been placed, it cannot be modified. However, if you need to cancel your order, please contact us as soon as possible and we'll do our best to accommodate your request."
+      },
+      {
+        "question": "How long does it take to process my order?",
+        "answer": "We typically process orders within 1-2 business days, although processing times may vary during peak periods."
+      }
+    ]
+  },
+  {
+    "sectionTitle": "Payment Questions",
+    "items": [
+      {
+        "question": "What forms of payment do you accept?",
+        "answer": "We accept all major credit cards, PayPal, and Apple Pay."
+      },
+      {
+        "question": "Is your website secure for online transactions?",
+        "answer": "Yes, our website is completely secure and all transactions are encrypted to protect your personal and payment information."
+      },
+      {
+        "question": "Can I use multiple forms of payment for my order?",
+        "answer": "At this time, we only accept one form of payment per order."
+      }
+    ]
+  }
+]
