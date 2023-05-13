@@ -7,9 +7,9 @@ import {
   StyledContainer,
   StyledH1,
   StyledH2,
-} from './mainStyles';
+} from './introSectionStyles';
 
-export const Main = () => {
+export const IntroSection = () => {
   return (
     <SectionWrapper>
       <Overlay />
