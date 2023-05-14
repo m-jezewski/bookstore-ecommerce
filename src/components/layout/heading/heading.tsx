@@ -8,7 +8,7 @@ interface HeadingProps {
 const Heading = ({ children }: HeadingProps) => {
   return (
     <ContainerWrapper>
-      <Container>
+      <Container maxWidth='xl'>
         <StyledTypography variant='h1'>{children}</StyledTypography>
       </Container>
     </ContainerWrapper>

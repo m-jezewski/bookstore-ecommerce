@@ -14,7 +14,7 @@ const FaqSection = () => {
           hesitate to contact us directly.
         </Subheading>
         {faqContent.map(({ sectionTitle, items }) => (
-          <div key={sectionTitle}>
+          <section key={sectionTitle}>
             <SectionTitle variant='h3'>{sectionTitle}</SectionTitle>
             {items.map(({ question, answer }) => (
               <div key={question}>
@@ -22,7 +22,7 @@ const FaqSection = () => {
                 <AnswerTypography variant='body2'>{answer}</AnswerTypography>
               </div>
             ))}
-          </div>
+          </section>
         ))}
       </Stack>
     </Container>

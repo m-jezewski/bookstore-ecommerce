@@ -10,20 +10,34 @@ export const theme = createTheme({
     },
     text: {
       primary: '#080F0F',
-      secondary: '#F3F3F3',
+      secondary: '#416d7e',
     },
     background: {
       default: '#F3F3F3',
     },
   },
   typography: {
-    fontFamily: ['Raleway', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'].join(','),
+    fontFamily: ['Roboto', 'Raleway', '"Helvetica Neue"', 'Arial', 'sans-serif'].join(','),
   },
   components: {
-    MuiButton: {
+    MuiTypography: {
       styleOverrides: {
         root: {
-          fontFamily: 'Roboto',
+          fontFamily: 'Raleway !important',
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        icon: {
+          fill: '#416d7e',
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        notchedOutline: {
+          border: '#416d7e 1px solid',
         },
       },
     },

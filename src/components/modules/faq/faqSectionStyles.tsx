@@ -1,11 +1,11 @@
 import { Typography, styled } from '@mui/material';
 
 const Subheading = styled(Typography)(({ theme }) => ({
-  ...theme.typography.h5,
+  ...theme.typography.h6,
 }));
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
-  ...theme.typography.h4,
+  ...theme.typography.h5,
   marginBottom: theme.spacing(3),
 }));
 
