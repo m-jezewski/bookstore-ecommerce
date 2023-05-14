@@ -1,6 +1,7 @@
 import { Box, Divider, List, ListItem, ListItemButton } from '@mui/material';
 import { StyledDrawer, StyledListItemText } from './navDrawerStyles';
 import navItems from '../navItems.json';
+import Link from 'next/link';
 
 interface NavDrawerProps {
   mobileOpen: boolean;
@@ -26,7 +27,7 @@ export const NavDrawer = ({ mobileOpen, handleDrawerToggle }: NavDrawerProps) =>
         <List>
           {navItems.map((item) => (
             <ListItem key={item.text} disablePadding>
-              <ListItemButton>
+              <ListItemButton LinkComponent={Link} href={item.href}>
                 <StyledListItemText primary={item.text} />
               </ListItemButton>
             </ListItem>
