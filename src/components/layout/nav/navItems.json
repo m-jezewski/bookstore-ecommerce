@@ -114,7 +114,7 @@
         ]
       }
     ],
-    "href": "/"
+    "href": "/audiobooks"
   },
   {
     "text": "Ebooks",
@@ -174,22 +174,22 @@
         ]
       }
     ],
-    "href": "/"
+    "href": "/ebooks"
   },
   {
     "text": "Gift Cards",
-    "href": "/"
+    "href": "/cards"
   },
   {
     "text": "FAQ",
-    "href": "/"
+    "href": "/faq"
   },
   {
     "text": "About us",
-    "href": "/"
+    "href": "/about"
   },
   {
     "text": "Coupons & Deals",
-    "href": "/"
+    "href": "/deals"
   }
 ]
