@@ -1,6 +1,6 @@
 import { Box, Container, List, ListItem, Typography } from '@mui/material';
 import { FooterWrapper, StyledContainer, ListTitle, StyledListItemText } from './footerStyles';
-import footerContent from './footerContent.json';
+import footerContent from '@/contentData/footerContent.json';
 import Link from 'next/link';
 
 interface FooterProps {}

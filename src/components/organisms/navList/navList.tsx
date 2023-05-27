@@ -1,9 +1,9 @@
 import { Box, Button, ButtonGroup } from '@mui/material';
 import Link from 'next/link';
 import { StyledContainer } from './navListStyles';
-import navItems from '../navItems.json';
-import { OnHoverPopover } from '@/components/onHoverPopover/onHoverPopover';
-import { NavListItemMenu } from '../navListItemMenu/NavListItemMenu';
+import navItems from '@/contentData/navItems.json';
+import { OnHoverPopover } from '@/components/molecules/onHoverPopover/onHoverPopover';
+import { NavListItemMenu } from '../../molecules/navListItemMenu/navListItemMenu';
 
 // Nav component in desktop resolution
 

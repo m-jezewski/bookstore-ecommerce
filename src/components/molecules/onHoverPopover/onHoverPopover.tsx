@@ -1,10 +1,10 @@
-import { Box, Button, Popover, SxProps, Theme } from '@mui/material';
+import { Box, Button, Collapse, Fade, Grow, Popover, SxProps, Theme, Zoom } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useRef, useState, ReactNode, useEffect } from 'react';
 
 interface OnHoverPopoverProps {
-  buttonText: string;
+  buttonText: ReactNode;
   buttonVariant?: 'outlined' | 'contained' | 'text';
   children: ReactNode;
   buttonSx?: SxProps<Theme>;
@@ -38,7 +38,7 @@ export const OnHoverPopover = ({
       if (mouseInTarget === false) {
         setOpenPopover(false);
       }
-    }, 150);
+    }, 100);
   };
 
   useEffect(() => {
@@ -72,6 +72,7 @@ export const OnHoverPopover = ({
           vertical: 'top',
           horizontal: 'left',
         }}
+        TransitionComponent={Grow}
         onClose={handlePopoverClose}
         disableRestoreFocus
         sx={{

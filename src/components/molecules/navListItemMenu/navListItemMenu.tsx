@@ -5,7 +5,7 @@ import {
   StyledListItem,
   StyledListItemText,
   Wrapper,
-} from './NavListItemMenuStyles';
+} from './navListItemMenuStyles';
 import Link from 'next/link';
 
 interface NavListItemMenuProps {

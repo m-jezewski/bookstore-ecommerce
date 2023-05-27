@@ -1,13 +1,13 @@
-import Heading from '@/components/layout/heading/heading';
+import Heading from '@/components/atoms/heading/heading';
 import FaqSection from '@/components/modules/faq/faqSection';
-import ProductsPage from '@/components/modules/products/productsPage/productsPage';
+import ProductsPage from '@/components/modules/productsPage/productsPage';
 import Head from 'next/head';
 
 export default function FAQ() {
   return (
     <>
       <Head>
-        <title>Booktopia - FAQ</title>
+        <title>FAQ - Booktopia</title>
       </Head>
       <Heading>FAQ</Heading>
       <FaqSection />

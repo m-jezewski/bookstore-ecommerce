@@ -1,6 +1,6 @@
 import { Box, Divider, List, ListItem, ListItemButton } from '@mui/material';
 import { StyledDrawer, StyledListItemText } from './navDrawerStyles';
-import navItems from '../navItems.json';
+import navItems from '@/contentData/navItems.json';
 import Link from 'next/link';
 
 interface NavDrawerProps {
