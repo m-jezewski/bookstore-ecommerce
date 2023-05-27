@@ -64,14 +64,6 @@ const UpperHeader = styled(Box)(({ theme }) => ({
   justifyContent: 'space-between',
 }));
 
-const StyledTextField = styled(TextField)(({ theme }) => ({
-  width: '13rem',
-  translate: '0 -5px',
-  [theme.breakpoints.down('md')]: {
-    display: 'none',
-  },
-}));
-
 export {
   StyledAppBar,
   StyledStack,
@@ -79,5 +71,4 @@ export {
   LogoTypography,
   UpperHeaderSection,
   UpperHeader,
-  StyledTextField,
 };
