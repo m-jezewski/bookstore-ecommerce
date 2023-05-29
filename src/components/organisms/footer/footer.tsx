@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 interface FooterProps {}
 
-const Footer = ({}: FooterProps) => {
+export const Footer = ({}: FooterProps) => {
   return (
     <FooterWrapper>
       <StyledContainer>
@@ -25,5 +25,3 @@ const Footer = ({}: FooterProps) => {
     </FooterWrapper>
   );
 };
-
-export default Footer;

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { StyledContainer } from './navListStyles';
 import navItems from '@/contentData/navItems.json';
 import { OnHoverPopover } from '@/components/molecules/onHoverPopover/onHoverPopover';
-import { NavListItemMenu } from '../../molecules/navListItemMenu/navListItemMenu';
+import { NavListItemMenu } from '@/components/molecules/navListItemMenu/navListItemMenu';
 
 // Nav component in desktop resolution
 

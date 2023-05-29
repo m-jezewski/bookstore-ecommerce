@@ -1,11 +1,7 @@
 import { UserIcon } from '@heroicons/react/24/outline';
 import { Button, IconButton, Popover, useMediaQuery } from '@mui/material';
 import { useState } from 'react';
-import AccountPopoverContent from '../accountPopoverContent/accountPopoverContent';
-
-interface AccountButtonPopoverProps {}
-
-// this will (probably, still thinking about that) open popover with login and register links
+import { AccountPopoverContent } from '../accountPopoverContent/accountPopoverContent';
 
 export const AccountButtonPopover = () => {
   const upMd = useMediaQuery('(min-width: 900px)');

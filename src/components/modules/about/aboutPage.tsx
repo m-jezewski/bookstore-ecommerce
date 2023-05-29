@@ -7,7 +7,7 @@ import {
   ImageWrapper,
 } from './aboutPageStyles';
 
-const AboutPage = () => {
+export const AboutPage = () => {
   const imgSizes = '(max-width: 900px) 600px, (max-width: 1200px) 384px, 640px';
 
   return (
@@ -71,5 +71,3 @@ const AboutPage = () => {
     </Container>
   );
 };
-
-export default AboutPage;

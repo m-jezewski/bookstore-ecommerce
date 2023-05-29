@@ -1,14 +1,14 @@
 import { Box, Container } from '@mui/material';
 import { ReactNode } from 'react';
-import Header from '../header/header';
-import Footer from '../footer/footer';
+import { Header } from '../header/header';
+import { Footer } from '../footer/footer';
 import { LayoutWrapper, Main } from './layoutStyles';
 
 interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+export const Layout = ({ children }: LayoutProps) => {
   return (
     <LayoutWrapper>
       <Header />
@@ -17,5 +17,3 @@ const Layout = ({ children }: LayoutProps) => {
     </LayoutWrapper>
   );
 };
-
-export default Layout;

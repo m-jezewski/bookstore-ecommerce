@@ -5,7 +5,7 @@ interface CartButtonProps {}
 
 // in progress: this will be used to open drawer with all products currently in cart
 
-const CartButton = () => {
+export const CartButton = () => {
   const upMd = useMediaQuery('(min-width: 900px)');
 
   if (upMd) {
@@ -18,5 +18,3 @@ const CartButton = () => {
     </IconButton>
   );
 };
-
-export default CartButton;

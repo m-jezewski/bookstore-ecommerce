@@ -6,7 +6,7 @@ import '@fontsource/roboto/700.css';
 import type { AppProps } from 'next/app';
 import { theme } from '@/styles/muiTheme';
 import { ThemeProvider } from '@mui/material';
-import Layout from '@/components/organisms/layout/layout';
+import { Layout } from '@/components/organisms/layout/layout';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

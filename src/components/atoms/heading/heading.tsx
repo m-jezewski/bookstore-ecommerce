@@ -5,7 +5,7 @@ interface HeadingProps {
   children: React.ReactNode;
 }
 
-const Heading = ({ children }: HeadingProps) => {
+export const Heading = ({ children }: HeadingProps) => {
   return (
     <ContainerWrapper>
       <Container maxWidth='xl'>
@@ -14,5 +14,3 @@ const Heading = ({ children }: HeadingProps) => {
     </ContainerWrapper>
   );
 };
-
-export default Heading;

@@ -1,13 +1,15 @@
+import { Heading } from '@/components/atoms/heading/heading';
+import ProductsPage from '@/components/modules/productsPage/productsPage';
 import Head from 'next/head';
-import { Main } from '@/components/modules/index/main';
 
 export default function Books() {
   return (
     <>
       <Head>
-        <title>Booktopia - Books</title>
+        <title>Book collection - Booktopia</title>
       </Head>
-      <div>books collection will be here</div>
+      <Heading>Books</Heading>
+      <ProductsPage />
     </>
   );
 }

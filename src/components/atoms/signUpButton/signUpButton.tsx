@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 
 interface SignUpButtonProps {}
 
-const SignUpButton = () => {
+export const SignUpButton = () => {
   const handleClick = () => {
     // opens some sort of popup to SignUp or redirects user to SignUp page
   };
@@ -13,5 +13,3 @@ const SignUpButton = () => {
     </Button>
   );
 };
-
-export default SignUpButton;

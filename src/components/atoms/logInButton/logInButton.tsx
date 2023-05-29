@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 
 interface LogInButtonProps {}
 
-const LogInButton = () => {
+export const LogInButton = () => {
   const handleClick = () => {
     // opens some sort of popup to login or redirects user to login page
   };
@@ -13,5 +13,3 @@ const LogInButton = () => {
     </Button>
   );
 };
-
-export default LogInButton;

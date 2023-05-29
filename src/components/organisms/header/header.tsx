@@ -11,13 +11,13 @@ import {
   UpperHeader,
 } from './headerStyles';
 import Link from 'next/link';
-import AccountButton from '@/components/atoms/accountButton/accountButton';
-import CartButton from '@/components/atoms/cartButton/cartButton';
+import { AccountButtonPopover } from '@/components/atoms/accountButtonPopover/accountButtonPopover';
+import { CartButton } from '@/components/atoms/cartButton/cartButton';
 import { NavList } from '../navList/navList';
 
 // App main header component
 
-const Header = () => {
+export const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -40,7 +40,7 @@ const Header = () => {
               </UpperHeaderSection>
               <UpperHeaderSection>
                 <CartButton />
-                <AccountButton />
+                <AccountButtonPopover />
               </UpperHeaderSection>
             </UpperHeader>
             <NavList />
@@ -51,5 +51,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;

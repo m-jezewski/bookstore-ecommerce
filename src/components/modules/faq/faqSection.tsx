@@ -1,10 +1,10 @@
 import { Container, Stack, Typography } from '@mui/material';
 import { AnswerTypography, QuestionTypography, SectionTitle, Subheading } from './faqSectionStyles';
-import faqContent from './faqContent.json';
+import faqContent from '../../../contentData/faqContent.json';
 
 interface FaqSectionProps {}
 
-const FaqSection = () => {
+export const FaqSection = () => {
   return (
     <Container maxWidth='xl' sx={{ mb: 6 }}>
       <Stack gap={4}>
@@ -28,5 +28,3 @@ const FaqSection = () => {
     </Container>
   );
 };
-
-export default FaqSection;
