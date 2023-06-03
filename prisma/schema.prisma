@@ -1,0 +1,129 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  directUrl         = env("DIRECT_URL")
+}
+generator client {
+  provider          = "prisma-client-js"
+}
+
+enum ProductType {
+  BOOK
+  EBOOK
+  AUDIOBOOK
+  GIFT_CARD
+}
+
+model User {
+  id                String     @id @default(cuid())
+  email             String     @unique
+  comments          Comment[]   // 1-n user can have many comments
+  customer          Customer?   // optional 1-1 user can be a customer 
+}
+
+model Comment {
+  id                 String     @id @default(cuid())
+  userId             String     
+  productId          String
+  content            String
+  author             User       @relation(fields: [userId], references: [id]) // 1-n comment have one author (user)
+  product            Product    @relation(fields: [productId], references: [id]) // 1-n comment belong to one product
+}
+
+model ProductCategory {
+  id                 String @id @default(cuid())
+  name               String 
+  parentCategoryId   String?
+  parentCategory     ProductCategory? @relation("CategoryInheritance", fields: [parentCategoryId], references: [id])
+  parentCategories   ProductCategory[]  @relation("CategoryInheritance") // eg. Fictional is parent category to Fantasy, Fantasy is child category to Fictional 
+  products           Product[]     // m-n, categories have many products
+}
+
+model Product {
+  id                 String     @id @default(cuid())
+  name               String
+  description        String
+  subheading         String
+  price              Decimal
+  availability       String
+  image              String
+  type               ProductType
+  BookDetails        BookDetails?
+  EbookDetails       EbookDetails?
+  AudiobookDetails   AudiobookDetails?
+  GiftCardDetails    GiftCardDetails?
+
+  orderItems         OrderItem[]
+  comments           Comment[] // 1-n Product can have many comments
+  category           ProductCategory[] // m-n product can have mutliple categories (eg. Fictional, Sci-Fi, Horror)
+}
+
+model BookDetails {
+  id                  String     @id @default(cuid())
+  isbn                String
+  author              String
+  pages               Int
+  product_dimensions   String
+  productId           String      @unique
+  product             Product     @relation(fields: [productId], references: [id])   
+}
+model EbookDetails {
+  id                  Int         @id @default(autoincrement())
+  author              String
+  format              String
+  fileSize            Int
+  productId           String      @unique
+  product             Product     @relation(fields: [productId], references: [id])
+}
+model AudiobookDetails {
+  id                  Int         @id @default(autoincrement())
+  duration            Int
+  narrator            String
+  author              String
+  productId           String      @unique
+  product             Product     @relation(fields: [productId], references: [id])
+}       
+model GiftCardDetails {
+  id                  Int         @id @default(autoincrement())
+  expiration_date      DateTime
+  productId           String      @unique
+  product             Product     @relation(fields: [productId], references: [id])
+}
+
+// order stuff
+
+model Customer {
+  id                  String      @id @default(cuid())
+  first_name          String
+  last_name           String
+  phone_number        String
+  country             String
+  city                String
+  street_address      String
+  zip_code            String
+  userId              String @unique
+  user                User?  @relation(fields: [userId], references: [id]) // 1-1 Customer can be user
+  orders              Order[] // orders
+}
+
+model OrderItem{
+  productId           String @unique
+  product             Product @relation(fields: [productId], references: [id])
+  quantity            Int   
+  total_price         Decimal   
+  orderId             String
+  order               Order @relation(fields: [orderId], references: [id])
+}
+
+model Order {
+  id                String        @id @default(cuid())
+  created_at        DateTime
+  total_price       Decimal
+  status            String
+  ordered_items     OrderItem[]
+  customer_id       String
+  customer          Customer @relation(fields: [customer_id], references: [id])
+}
