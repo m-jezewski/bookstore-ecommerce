@@ -12,7 +12,6 @@
   ],
   "plugins": [
     "jsx-a11y",
-    "react-app",
     "react-hooks",
     "jest-dom",
     "testing-library",
