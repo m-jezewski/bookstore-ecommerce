@@ -1,9 +1,8 @@
 import ErrorMessage from '@/components/atoms/errorMessage/errorMessage';
-import { Button, FormLabel, Stack, Switch, TextField } from '@mui/material';
+import { Button, FormLabel, Stack, Switch, TextField, Typography } from '@mui/material';
 import { Form, Formik } from 'formik';
 import { useCreateCategoryMutation } from './useCreateCategoryMutation';
 import { validateForm } from './validateForm';
-import { StyledStack } from './addCategoryFormStyles';
 
 const AddCategoryForm = () => {
   const createCategoryMutation = useCreateCategoryMutation();
@@ -30,7 +29,7 @@ const AddCategoryForm = () => {
       }}>
       {({ values, handleChange, errors }) => (
         <Form>
-          <StyledStack gap={1}>
+          <Stack gap={1}>
             <ErrorMessage>{errors.categoryName}</ErrorMessage>
             <TextField
               name='categoryName'
@@ -58,7 +57,7 @@ const AddCategoryForm = () => {
             <Button type='submit' variant='contained'>
               Add new category
             </Button>
-          </StyledStack>
+          </Stack>
         </Form>
       )}
     </Formik>

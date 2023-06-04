@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import { StyledStack } from './tabPanelStyles';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -11,7 +12,7 @@ const TabPanel = (props: TabPanelProps) => {
 
   return (
     <div role='tabpanel' hidden={value !== index} {...other}>
-      {value === index && <Box>{children}</Box>}
+      {value === index && <StyledStack>{children}</StyledStack>}
     </div>
   );
 };
