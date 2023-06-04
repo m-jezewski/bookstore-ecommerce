@@ -3,6 +3,7 @@ import { Button, FormLabel, Stack, Switch, TextField, Typography } from '@mui/ma
 import { Form, Formik } from 'formik';
 import { useCreateCategoryMutation } from './useCreateCategoryMutation';
 import { validateForm } from './validateForm';
+import FormHeading from '@/components/atoms/formHeading/formHeading';
 
 const AddCategoryForm = () => {
   const createCategoryMutation = useCreateCategoryMutation();
@@ -30,6 +31,9 @@ const AddCategoryForm = () => {
       {({ values, handleChange, errors }) => (
         <Form>
           <Stack gap={1}>
+            <FormHeading variant={'h2'} color='secondary'>
+              Add category
+            </FormHeading>
             <ErrorMessage>{errors.categoryName}</ErrorMessage>
             <TextField
               name='categoryName'
