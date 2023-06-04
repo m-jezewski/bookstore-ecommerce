@@ -11,7 +11,7 @@ import {
   UpperHeader,
 } from './headerStyles';
 import Link from 'next/link';
-import { AccountButtonPopover } from '@/components/atoms/accountButtonPopover/accountButtonPopover';
+import { AccountButtonPopover } from '@/components/molecules/accountButtonPopover/accountButtonPopover';
 import { CartButton } from '@/components/atoms/cartButton/cartButton';
 import { NavList } from '../navList/navList';
 

@@ -2,6 +2,7 @@ import { UserIcon } from '@heroicons/react/24/outline';
 import { Button, IconButton, Popover, useMediaQuery } from '@mui/material';
 import { useState } from 'react';
 import { AccountPopoverContent } from '../accountPopoverContent/accountPopoverContent';
+import { StyledPopover } from './accountButtonPopoverStylest';
 
 export const AccountButtonPopover = () => {
   const upMd = useMediaQuery('(min-width: 900px)');
@@ -27,16 +28,10 @@ export const AccountButtonPopover = () => {
           <UserIcon height={24} width={24} />
         </IconButton>
       )}
-      <Popover
+      <StyledPopover
         open={open}
         anchorEl={anchorEl}
         onClose={handleClosePopover}
-        sx={{
-          zIndex: 10000,
-          '& .MuiPaper-root': {
-            borderRadius: '0.5rem',
-          },
-        }}
         anchorOrigin={{
           vertical: 'bottom',
           horizontal: 'center',
@@ -46,7 +41,7 @@ export const AccountButtonPopover = () => {
           horizontal: 'center',
         }}>
         <AccountPopoverContent />
-      </Popover>
+      </StyledPopover>
     </>
   );
 };
