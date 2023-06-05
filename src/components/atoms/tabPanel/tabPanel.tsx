@@ -12,7 +12,7 @@ const TabPanel = (props: TabPanelProps) => {
 
   return (
     <div role='tabpanel' hidden={value !== index} {...other}>
-      {value === index && <StyledStack>{children}</StyledStack>}
+      {value === index && <StyledStack gap={2}>{children}</StyledStack>}
     </div>
   );
 };

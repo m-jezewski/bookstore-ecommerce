@@ -5,7 +5,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   color: theme.palette.text.primary,
   paddingTop: theme.spacing(2),
-  paddingBottom: theme.spacing(1.25),
+  paddingBottom: theme.spacing(2),
   zIndex: 1400,
 }));
 
